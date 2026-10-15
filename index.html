@@ -1,0 +1,243 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07110b">
+  <meta name="description"
+        content="Earthmass Logistics — Safe Rides. On Time. Always. Book a motorcycle ride, package delivery or tricycle service.">
+  <title>Earthmass Logistics | Safe Rides. On Time. Always.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Earthmass Logistics home">
+      <img src="earthmass-logo.png" alt="Earthmass Logistics logo">
+    </a>
+    <a class="header-cta" href="#booking">Book a Service</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO EARTHMASS LOGISTICS</p>
+        <h1>Your journey.<br><span>Our commitment.</span></h1>
+        <p class="hero-copy">
+          Move with confidence. Whether you need a passenger ride,
+          a package delivered, or a tricycle service, we make arranging
+          your trip simple, clear and convenient.
+        </p>
+        <p class="slogan">Safe Rides. On Time. Always.</p>
+        <a class="primary-button" href="#services">Explore Our Services</a>
+      </div>
+    </section>
+
+    <section class="trust-section">
+      <p class="eyebrow">WHY EARTHMASS?</p>
+      <h2>Transportation made simpler.</h2>
+      <div class="trust-grid">
+        <article class="trust-card">
+          <span class="trust-icon" aria-hidden="true">✓</span>
+          <h3>Reliable service</h3>
+          <p>We work with you to confirm your request and arrangements.</p>
+        </article>
+        <article class="trust-card">
+          <span class="trust-icon" aria-hidden="true">◆</span>
+          <h3>Safety-conscious</h3>
+          <p>Your journey and the proper handling of your items matter.</p>
+        </article>
+        <article class="trust-card">
+          <span class="trust-icon" aria-hidden="true">↗</span>
+          <h3>Simple booking</h3>
+          <p>Choose a service, provide your details and submit your request.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <p class="eyebrow">OUR SERVICES</p>
+      <h2>What can we help you with?</h2>
+      <p class="section-intro">
+        Select the service that suits your needs. We’ll ask only for the
+        information needed to arrange your request.
+      </p>
+
+      <div class="service-grid">
+        <button class="service-card" type="button" data-service="motorcycle">
+          <span class="service-icon" aria-hidden="true">🏍</span>
+          <span class="service-title">Motorcycle Ride</span>
+          <span>Passenger transportation</span>
+          <span class="service-link">Select service →</span>
+        </button>
+
+        <button class="service-card" type="button" data-service="delivery">
+          <span class="service-icon" aria-hidden="true">📦</span>
+          <span class="service-title">Package Delivery</span>
+          <span>Send an item to its destination</span>
+          <span class="service-link">Select service →</span>
+        </button>
+
+        <button class="service-card" type="button" data-service="tricycle">
+          <span class="service-icon" aria-hidden="true">🛺</span>
+          <span class="service-title">Tricycle (Keke)</span>
+          <span>Passenger or load transportation</span>
+          <span class="service-link">Select service →</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="booking-heading">
+        <p class="eyebrow">BOOKING REQUEST</p>
+        <h2>Let’s arrange your service.</h2>
+        <p>Complete the relevant details below. Submitting a request does
+          not mean that a ride or delivery has been confirmed.</p>
+      </div>
+
+      <div class="booking-panel">
+        <div class="steps" aria-label="Booking steps">
+          <span class="step active" id="step1">1. Service</span>
+          <span class="step" id="step2">2. Details</span>
+          <span class="step" id="step3">3. Review</span>
+        </div>
+
+        <form id="bookingForm">
+          <div class="form-group">
+            <label for="serviceType">Choose a service </label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">Select a service</option>
+              <option value="motorcycle">Motorcycle Ride</option>
+              <option value="delivery">Package Delivery</option>
+              <option value="tricycle">Tricycle (Keke)</option>
+            </select>
+          </div>
+
+          <div id="dynamicFields"></div>
+
+          <div class="form-group">
+            <label for="preferredDate">Preferred date </label>
+            <input id="preferredDate" name="preferredDate"
+                   type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="preferredTime">Preferred time </label>
+            <input id="preferredTime" name="preferredTime"
+                   type="time" required>
+          </div>
+
+          <div class="form-group">
+            <label for="directions">Landmark, lodge number or extra directions</label>
+            <textarea id="directions" name="directions" rows="3"
+              placeholder="Add useful directions to help us locate you"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="referencePrice">Reference price (optional)</label>
+            <select id="referencePrice" name="referencePrice">
+              <option value="">Let management advise me</option>
+              <option value="₦1,000">Short distance — ₦1,000</option>
+              <option value="₦3,000">Nearby trip — ₦3,000</option>
+              <option value="₦5,000">Local trip — ₦5,000</option>
+              <option value="₦7,000">Medium distance — ₦7,000</option>
+              <option value="₦20,000">Long distance — ₦20,000</option>
+              <option value="₦50,000">Extended trip or delivery — ₦50,000</option>
+            </select>
+            <small>
+              These are reference prices, not guaranteed fares. The final
+              price depends on the request and must be confirmed by management.
+              Keke and package delivery prices are confirmed individually.
+            </small>
+          </div>
+
+          <div class="notice">
+            <strong>Important booking notice</strong>
+            <p>
+              Please allow up to 20 minutes for our team to confirm your fare,
+              payment arrangements, and driver availability. Your booking is
+              not confirmed until management contacts you and approves the
+              arrangements.
+            </p>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="agreement" required>
+            <span>I understand this is a booking request and that the fare and
+              payment arrangements must be agreed before confirmation.</span>
+          </label>
+
+          <button class="primary-button submit-button" type="submit">
+            Review Booking Request
+          </button>
+          <p id="formMessage" class="form-message" role="status"></p>
+        </form>
+
+        <div id="reviewPanel" class="review-panel" hidden>
+          <h3>Please review your request</h3>
+          <div id="reviewDetails"></div>
+          <p class="review-note">
+            Your WhatsApp app will open with your request prepared.
+            Please check the message and press Send to submit it to Earthmass
+            Logistics.
+          </p>
+          <button id="sendWhatsApp" class="primary-button" type="button">
+            Continue to WhatsApp
+          </button>
+          <button id="editBooking" class="secondary-button" type="button">
+            Edit details
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <p class="eyebrow">PRICE GUIDE</p>
+      <h2>Clear reference prices.</h2>
+      <p class="section-intro">
+        Use these figures as a guide when making a request. They do not replace
+        management’s confirmation of your actual fare.
+      </p>
+      <div class="price-grid">
+        <div class="price-card"><span>Short distance</span><strong>₦1,000</strong></div>
+        <div class="price-card"><span>Nearby trip</span><strong>₦3,000</strong></div>
+        <div class="price-card"><span>Local trip</span><strong>₦5,000</strong></div>
+        <div class="price-card"><span>Medium distance</span><strong>₦7,000</strong></div>
+        <div class="price-card"><span>Long distance</span><strong>₦20,000</strong></div>
+        <div class="price-card"><span>Extended trip or delivery</span><strong>₦50,000</strong></div>
+      </div>
+    </section>
+
+    <section class="payment-section" id="payment">
+      <p class="eyebrow">PAYMENT INFORMATION</p>
+      <h2>Agree first. Then pay.</h2>
+      <p>
+        Please wait until management confirms your fare and payment
+        arrangements. Do not treat a reference price as an approved quote.
+      </p>
+      <div class="bank-card">
+        <p><span>Bank</span><strong>OPay</strong></p>
+        <p><span>Account name</span><strong>Henry Chibuzor Ayogu</strong></p>
+        <p><span>Account number</span><strong>8026265351</strong></p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Need help before booking?</h2>
+      <p>Contact our team about your service request or payment arrangements.</p>
+      <a class="secondary-button"
+         href="https://wa.me/2348026265351"
+         target="_blank" rel="noopener noreferrer">Contact us on WhatsApp</a>
+      <p class="contact-email">henrychibuzor305@gmail.com</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="earthmass-logo.png" alt="" aria-hidden="true">
+    <p>Safe Rides. On Time. Always.</p>
+    <small>© <span id="year"></span> Earthmass Logistics. All rights reserved.</small>
+  </footer>
+</body>
+</html>
