@@ -2,9 +2,7 @@
 :root {
   --bg: #101510;
   --panel: #191f19;
-  --panel-light: #202920;
   --green: #73d647;
-  --green-dark: #4fa92b;
   --white: #f7faf5;
   --muted: #c0c9bd;
   --border: #394439;
@@ -12,7 +10,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -157,7 +154,6 @@ a { color: inherit; }
 }
 
 .booking-intro { position: sticky; top: 24px; }
-
 .booking-intro > p:not(.eyebrow) { color: var(--muted); }
 
 .notice, .confirmation-note {
@@ -170,7 +166,11 @@ a { color: inherit; }
 }
 
 .notice strong, .confirmation-note strong { color: var(--green); }
-.notice p, .confirmation-note p { margin: 7px 0 0; color: var(--muted); font-size: 14px; }
+.notice p, .confirmation-note p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
 
 #bookingForm {
   min-width: 0;
@@ -225,7 +225,10 @@ input, select, textarea {
   font-size: 15px;
 }
 
-input::placeholder, textarea::placeholder { color: #aeb9ab; opacity: 1; }
+input::placeholder, textarea::placeholder {
+  color: #aeb9ab;
+  opacity: 1;
+}
 
 input:focus, select:focus, textarea:focus {
   outline: 2px solid var(--green);
@@ -234,7 +237,6 @@ input:focus, select:focus, textarea:focus {
 }
 
 textarea { resize: vertical; }
-
 small, .field-note, .form-footnote {
   display: block;
   margin: -9px 0 14px;
@@ -244,18 +246,6 @@ small, .field-note, .form-footnote {
 }
 
 [hidden] { display: none !important; }
-
-.fare-estimate {
-  margin-top: 8px;
-  padding: 20px;
-  border: 1px solid #527d40;
-  border-radius: 10px;
-  background: #1a2a17;
-}
-
-.fare-estimate span { display: block; color: var(--muted); font-size: 14px; }
-.fare-estimate strong { display: block; margin: 4px 0; color: var(--green); font-size: 32px; }
-.fare-estimate p { margin: 0; color: var(--muted); font-size: 13px; }
 
 .submit-button {
   width: 100%;
@@ -327,3 +317,4 @@ small, .field-note, .form-footnote {
   .submit-button { padding: 14px 12px; font-size: 14px; }
   .site-footer { flex-direction: column; }
   }
+  
