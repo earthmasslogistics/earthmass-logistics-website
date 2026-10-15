@@ -23,7 +23,10 @@
     <section class="hero">
       <p class="eyebrow">SAFE RIDES. ON TIME. ALWAYS.</p>
       <h1>Your journey.<br><span>Our responsibility.</span></h1>
-      <p class="hero-copy">Book a motorcycle ride, Keke transport or package delivery. Send your request and our team will contact you to confirm the fare and availability.</p>
+      <p class="hero-copy">
+        Book a motorcycle ride, Keke transport or package delivery.
+        Send your request and our team will contact you to confirm the fare and availability.
+      </p>
       <a class="primary-button" href="#booking">Start a Booking <span>→</span></a>
     </section>
 
@@ -32,23 +35,24 @@
         <p class="eyebrow">OUR SERVICES</p>
         <h2>How can we help you?</h2>
       </div>
+
       <div class="service-grid">
         <article class="service-card">
           <span class="service-number">01</span>
           <h3>Motorcycle Ride</h3>
           <p>Convenient passenger transportation for your journey.</p>
-          <span class="service-rate">Base estimate: ₦1,000 per passenger</span>
+          <span class="service-rate">Fare confirmed by management</span>
         </article>
         <article class="service-card">
           <span class="service-number">02</span>
           <h3>Package Delivery</h3>
           <p>Send packages and items from pickup to destination.</p>
-          <span class="service-rate">Fare confirmed by management</span>
+          <span class="service-rate">Delivery fee confirmed by management</span>
         </article>
         <article class="service-card">
           <span class="service-number">03</span>
           <h3>Tricycle (Keke)</h3>
-          <p>Request passenger transport or transport for suitable loads.</p>
+          <p>Request passenger transportation or transport for suitable loads.</p>
           <span class="service-rate">Fare confirmed by management</span>
         </article>
       </div>
@@ -58,10 +62,15 @@
       <div class="booking-intro">
         <p class="eyebrow">BOOKING REQUEST</p>
         <h2>Let's get you moving.</h2>
-        <p>Complete the details below. The form will show the fields relevant to your selected service.</p>
+        <p>Choose your service and complete the relevant details below.</p>
+
         <div class="notice">
           <strong>Before you book</strong>
-          <p>Please allow up to 20 minutes for our team to review your request and respond. Your booking is not confirmed until management contacts you and approves the fare, payment arrangements and availability.</p>
+          <p>
+            Please allow up to 20 minutes for our team to review your request and respond.
+            Your booking is not confirmed until management contacts you and approves
+            the fare, payment arrangements and availability.
+          </p>
         </div>
       </div>
 
@@ -82,11 +91,14 @@
           <div class="form-grid">
             <div>
               <label for="customerName">Your full name *</label>
-              <input id="customerName" name="customerName" autocomplete="name" required placeholder="Enter your name">
+              <input id="customerName" name="customerName"
+                     autocomplete="name" required placeholder="Enter your name">
             </div>
             <div>
-              <label for="customerPhone">Phone number *</label>
-              <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" required placeholder="e.g. 08012345678">
+              <label for="customerPhone">Your phone number *</label>
+              <input id="customerPhone" name="customerPhone"
+                     type="tel" autocomplete="tel" required
+                     placeholder="e.g. 08012345678">
             </div>
           </div>
         </div>
@@ -102,7 +114,10 @@
                 <option value="3">3 passengers</option>
                 <option value="4">4 passengers</option>
               </select>
-              <small>For group trips, management will confirm the appropriate number of motorcycles and safe passenger arrangements.</small>
+              <small>
+                Management will confirm suitable transport arrangements and safe capacity.
+                Multiple motorcycles may be needed for a group.
+              </small>
             </div>
             <div>
               <label for="luggage">Will you have luggage? *</label>
@@ -110,13 +125,8 @@
                 <option value="Without luggage">Without luggage</option>
                 <option value="With luggage">With luggage</option>
               </select>
-              <small>Any additional luggage charge will be reviewed and confirmed by management.</small>
+              <small>Management will review any additional luggage charge.</small>
             </div>
-          </div>
-          <div class="fare-estimate" aria-live="polite">
-            <span>Estimated base fare</span>
-            <strong id="motorcycleEstimate">₦1,000</strong>
-            <p id="fareExplanation">₦1,000 × 1 passenger. This is an estimate, not a final quote.</p>
           </div>
         </div>
 
@@ -125,31 +135,40 @@
           <div class="form-grid">
             <div>
               <label for="senderName">Sender's name *</label>
-              <input id="senderName" name="senderName" placeholder="Who is sending the package?">
+              <input id="senderName" name="senderName"
+                     placeholder="Who is sending the package?">
             </div>
             <div>
-              <label for="senderPhone">Sender's phone *</label>
-              <input id="senderPhone" name="senderPhone" type="tel" placeholder="Sender's contact number">
+              <label for="senderPhone">Sender's phone number *</label>
+              <input id="senderPhone" name="senderPhone" type="tel"
+                     placeholder="Sender's contact number">
             </div>
             <div>
               <label for="recipientName">Recipient's name *</label>
-              <input id="recipientName" name="recipientName" placeholder="Who will receive it?">
+              <input id="recipientName" name="recipientName"
+                     placeholder="Who will receive it?">
             </div>
             <div>
-              <label for="recipientPhone">Recipient's phone *</label>
-              <input id="recipientPhone" name="recipientPhone" type="tel" placeholder="Recipient's contact number">
+              <label for="recipientPhone">Recipient's phone number *</label>
+              <input id="recipientPhone" name="recipientPhone" type="tel"
+                     placeholder="Recipient's contact number">
             </div>
           </div>
-          <label for="packageDescription">Package description *</label>
-          <textarea id="packageDescription" name="packageDescription" rows="3" placeholder="Describe the item and its approximate size"></textarea>
-          <p class="field-note">Management will review the request and confirm the delivery fare and whether the item can be accepted.</p>
+
+          <label for="packageDescription">What are you sending? *</label>
+          <textarea id="packageDescription" name="packageDescription" rows="3"
+                    placeholder="Describe the item, approximate size and quantity"></textarea>
+          <p class="field-note">
+            Management will review the package and confirm whether it can be accepted
+            and the delivery fee.
+          </p>
         </div>
 
         <div id="kekeFields" class="form-section service-fields" hidden>
           <h3>03 <span>Keke transport details</span></h3>
           <div class="form-grid">
             <div>
-              <label for="kekePassengers">Number of passengers</label>
+              <label for="kekePassengers">Number of passengers *</label>
               <select id="kekePassengers" name="kekePassengers">
                 <option value="1">1 passenger</option>
                 <option value="2">2 passengers</option>
@@ -160,10 +179,13 @@
             </div>
             <div>
               <label for="loadDetails">Load details (if applicable)</label>
-              <input id="loadDetails" name="loadDetails" placeholder="Describe any items or load">
+              <input id="loadDetails" name="loadDetails"
+                     placeholder="Describe any items or load">
             </div>
           </div>
-          <p class="field-note">Keke fares are confirmed manually by management. Passenger and load capacity must be approved before the trip.</p>
+          <p class="field-note">
+            Management will confirm the fare and suitable passenger or load capacity.
+          </p>
         </div>
 
         <div class="form-section">
@@ -171,30 +193,45 @@
           <div class="form-grid">
             <div>
               <label for="pickup">Pickup location *</label>
-              <input id="pickup" name="pickup" required placeholder="Street, area or landmark">
+              <input id="pickup" name="pickup" required
+                     placeholder="Street, area or landmark">
             </div>
             <div>
               <label for="destination">Destination *</label>
-              <input id="destination" name="destination" required placeholder="Where are you going?">
+              <input id="destination" name="destination" required
+                     placeholder="Where are you going?">
             </div>
           </div>
+
           <label for="directions">Extra directions or landmarks</label>
-          <textarea id="directions" name="directions" rows="3" placeholder="Nearby landmarks, lodge details or helpful instructions (optional)"></textarea>
+          <textarea id="directions" name="directions" rows="3"
+                    placeholder="Nearby landmarks or helpful instructions (optional)"></textarea>
         </div>
 
         <div class="form-section">
           <h3>05 <span>Preferred schedule</span></h3>
           <label for="preferredDate">Preferred date and time *</label>
-          <input id="preferredDate" name="preferredDate" type="datetime-local" required>
+          <input id="preferredDate" name="preferredDate"
+                 type="datetime-local" required>
         </div>
 
         <div class="confirmation-note">
-          <strong>What happens next?</strong>
-          <p>Your request will be prepared as a WhatsApp message. Review it and press Send in WhatsApp. Management will confirm the final fare, payment arrangements and availability. Please do not make payment until the arrangements have been agreed.</p>
+          <strong>How fare confirmation works</strong>
+          <p>
+            This form does not calculate or display a price. Management will review
+            your request and contact you with the actual fare or delivery fee,
+            availability and payment arrangements. Please do not pay until these
+            arrangements have been agreed.
+          </p>
         </div>
 
-        <button class="submit-button" type="submit">Send Booking Request via WhatsApp <span>→</span></button>
-        <p class="form-footnote">Submitting this form opens WhatsApp; it does not automatically confirm your booking.</p>
+        <button class="submit-button" type="submit">
+          Send Booking Request via WhatsApp <span>→</span>
+        </button>
+        <p class="form-footnote">
+          WhatsApp will open with your request prepared. Review it and press Send
+          to submit your booking request.
+        </p>
         <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
@@ -204,7 +241,7 @@
       <h2>Talk to our team.</h2>
       <p>Have a question before booking? Contact Earthmass Logistics directly.</p>
       <div class="contact-links">
-        <a href="https://wa.me/2348026265351" target="_blank" rel="noopener">WhatsApp: 08026265351</a>
+        <a href="https://wa.me/2348026265351">WhatsApp: 08026265351</a>
         <a href="mailto:henrychibuzor305@gmail.com">henrychibuzor305@gmail.com</a>
       </div>
     </section>
@@ -215,4 +252,5 @@
     <p>Safe Rides. On Time. Always.</p>
   </footer>
 </body>
-</html>
+      </html>
+                         
